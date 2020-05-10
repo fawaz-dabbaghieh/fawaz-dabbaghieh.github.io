@@ -3,6 +3,12 @@ body {
     width: 70%;
 }
 
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
 li {
     float: left;
 }
