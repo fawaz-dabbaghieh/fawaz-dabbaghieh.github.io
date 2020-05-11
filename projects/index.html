@@ -1,0 +1,35 @@
+---
+layout : default
+title : About page
+---
+
+<div>
+
+<!-- 	<ul class="posts">
+		<li><strong>BubbleGun</strong></li>
+		<li><strong>MSA to GFA</strong></li>
+		<li><strong>Upset Plots from k-mers</strong></li>
+		<li><strong>Metadata cleanup</strong></li>
+		<li><strong>Batch effect analysis Shiny R</strong></li>
+	</ul> -->
+
+	<h2 id="bubblegun">1. BubbleGun</h2>
+	<p>This was done during my master's thesis period with Tobias Marschall. I made a tool that detects Bubble and Superbubble chains in genome graphs. It was done in <strong>Python3</strong> and works relatively fast. It finished in around 20 to 25 minits on a human genome-size graph (around 25 million nodes) with around 25 Gb memory consumption.  <a href="https://github.molgen.mpg.de/fdabbagh/bubble_gun"><strong>Here</strong></a>. And my actual master's thesis can be found <a href="https://github.molgen.mpg.de/fdabbagh/thesis/blob/master/Thesis.pdf"><strong>Here</strong></a></p>
+	<p></p>
+	<h2 id="msa_to_gfa">2. MSA to GFA with embedded paths</h2>
+	<!-- how to link headers <a href="#bubblegun">Bubblegun</a> -->
+	<p>I recently wrote this small tool in <strong>Python3</strong> that takes a Multiple Sequence Alignment MSA and turns that into a graph file in GFA v1 format and adds paths to the file that corrisponds to the original sequences in the MSA, in case one wanted to visualize this in Gfaviz for example, the path will be colored then. The code is discribed <a href="https://github.com/fawaz-dabbaghieh/msa_to_gfa"><strong>Here</strong></a></p>
+
+	<h2 id="upset_plots">3. Upset plots from k-mers with Bifrost</h2>
+	<!-- how to link headers <a href="#bubblegun">Bubblegun</a> -->
+	<p>I extended a <strong>C++</strong> code written by Guillaume Holley and added a <strong>Python</strong> code to make upset plot from the output. The idea is that if you gave for example 5 genomes to Bifrost and you built a pangenome with a colors file, the c++ code can output the different intersections of k-mers between these genomes, my upset plot script then can take this input and make a plot with it. The code is discribed <a href="https://github.com/fawaz-dabbaghieh/theupsetkmer"><strong>Here</strong></a></p>
+
+	<h2 id="metadata_cleanup">4. Upset plots from k-mers with Bifrost</h2>
+	<!-- how to link headers <a href="#bubblegun">Bubblegun</a> -->
+	<p>During my work at Max Planck for informatics, I worked on a pipline that tries to automates the checking and fixing of metadata related to samples from the DEEP project (The German Epigenetics Project), especially that many labs were involved, a problem with metadata consistancy arose. We needed the metadata to be consistant especially when building statistical models from the samples, different ways a feature is written can be then considered as an actually different feature mathematically. E.g. If the same sequencer was used on some samples, but the name was different a bit, a statistical model in R for example, might consider those as different features. The pipeline was presented as a poster at the IHEC meeting in Berlin in 2017 <a href="http://ihec-epigenomes.org/news-events/berlin-2017/talks-posters/#science-days-posters"><strong>Here</strong></a>, poster number 40. And the pipeline written in Python can be found <a href="https://github.molgen.mpg.de/fdabbagh/metadata_fixer"><strong>Here</strong></a>.</p>
+
+	
+	<h2 id="shiny_app">5. R Shiny app for batch effect analysis </h2>
+	<p>This Shiny app in <strong>R</strong> was writted to retrieve, visualize and do batch effect analysis on epigenomic data retrieved from <a href="https://deepblue.mpi-inf.mpg.de/">DeepBlue</a> servers. It was disigned to automate the batch effect analysis and make the visualization easier. Implementation can be found here
+	<a href="https://github.molgen.mpg.de/fdabbagh/shiny-app"><strong>Here</strong></a>.</p>
+</div><!-- /.blurb -->
