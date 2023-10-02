@@ -13,9 +13,14 @@ title : About page
 		<li><strong>Batch effect analysis Shiny R</strong></li>
 	</ul> -->
 
-	<h2 id="bubblegun">1. BubbleGun</h2>
-	<p>This was done during my master's thesis period with Tobias Marschall. I made a tool that detects Bubble and Superbubble chains in genome graphs. It was done in <strong>Python3</strong> and works relatively fast. It finished in around 20 to 25 minits on a human genome-size graph (around 25 million nodes) with around 25 Gb memory consumption.  <a href="https://github.molgen.mpg.de/fdabbagh/bubble_gun"><strong>Here</strong></a>. And my actual master's thesis can be found <a href="https://github.molgen.mpg.de/fdabbagh/thesis/blob/master/Thesis.pdf"><strong>Here</strong></a></p>
+	<h2 id="PanPA">1. PanPA</h2>
+	<p>PanProteome Aligner is a tool I wrote that build graphs from amino acid sequences and can align back both DNA and AA sequences, and outputs alignments in the GAF format. The idea is that we can leverage the fact that amino acids are more conserved and build individual graphs for each gene from the amino acid sequence, and be able to align sequences coming from a longer distance organism on the phylogenetic tree. The tool can be found <a href="https://github.com/fawaz-dabbaghieh/PanPA"><strong>Here</strong></a> and some documentation can be found here <a href="https://panpa-readthedocs.readthedocs.io/en/latest/index.html"><strong>ReadTheDocs</strong></a>, the preprint that has been accepted to Bioinformatics Advances can be found <a href="https://www.biorxiv.org/content/10.1101/2023.01.19.524778v1"><strong>Here</strong></a>
 	<p></p>
+
+	<h2 id="bubblegun">1. BubbleGun</h2>
+	<p>This was done during my master's thesis period with Tobias Marschall. I made a tool that detects Bubble and Superbubble chains in genome graphs. It was done in <strong>Python3</strong> and works relatively fast. It finished in around 20 to 25 minutes on a human genome-size graph (around 25 million nodes) with around 25 Gb memory consumption.  <a href="https://github.molgen.mpg.de/fdabbagh/bubble_gun"><strong>Here</strong></a>. This work has been published in Bioinformatics, and can be found <a href="https://academic.oup.com/bioinformatics/article/38/17/4217/6633304"><strong>Here</strong></a></p>
+	<p></p>
+
 	<h2 id="msa_to_gfa">2. MSA to GFA with embedded paths</h2>
 	<!-- how to link headers <a href="#bubblegun">Bubblegun</a> -->
 	<p>I recently wrote this small tool in <strong>Python3</strong> that takes a Multiple Sequence Alignment MSA and turns that into a graph file in GFA v1 format and adds paths to the file that corrisponds to the original sequences in the MSA, in case one wanted to visualize this in Gfaviz for example, the path will be colored then. The code is discribed <a href="https://github.com/fawaz-dabbaghieh/msa_to_gfa"><strong>Here</strong></a></p>
@@ -28,7 +33,6 @@ title : About page
 	<!-- how to link headers <a href="#bubblegun">Bubblegun</a> -->
 	<p>During my work at Max Planck for informatics, I worked on a pipline that tries to automates the checking and fixing of metadata related to samples from the DEEP project (The German Epigenetics Project), especially that many labs were involved, a problem with metadata consistancy arose. We needed the metadata to be consistant especially when building statistical models from the samples, different ways a feature is written can be then considered as an actually different feature mathematically. E.g. If the same sequencer was used on some samples, but the name was different a bit, a statistical model in R for example, might consider those as different features. The pipeline was presented as a poster at the IHEC meeting in Berlin in 2017 <a href="http://ihec-epigenomes.org/news-events/berlin-2017/talks-posters/#science-days-posters"><strong>Here</strong></a>, poster number 40. And the pipeline written in Python can be found <a href="https://github.molgen.mpg.de/fdabbagh/metadata_fixer"><strong>Here</strong></a>.</p>
 
-	
 	<h2 id="shiny_app">5. R Shiny app for batch effect analysis </h2>
 	<p>This Shiny app in <strong>R</strong> was writted to retrieve, visualize and do batch effect analysis on epigenomic data retrieved from <a href="https://deepblue.mpi-inf.mpg.de/">DeepBlue</a> servers. It was disigned to automate the batch effect analysis and make the visualization easier. Implementation can be found here
 	<a href="https://github.molgen.mpg.de/fdabbagh/shiny-app"><strong>Here</strong></a>.</p>
