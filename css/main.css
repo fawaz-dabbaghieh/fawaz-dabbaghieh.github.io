@@ -1,6 +1,31 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --link-color: #2742ba;
+    --link-hover-color: #2742ba;
+    --nav-bg-color: #ffffff;
+    --nav-text-color: black;
+    --border-color: #d5d5d5;
+    --grey-color: #999;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e4e4e4;
+    --link-color: #6b9cff;
+    --link-hover-color: #6b9cff;
+    --nav-bg-color: #1a1a1a;
+    --nav-text-color: #e4e4e4;
+    --border-color: #444;
+    --grey-color: #aaa;
+}
+
 body {
     margin: 60px auto;
     width: 70%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .center {
@@ -26,11 +51,11 @@ nav ul li, footer ul li {
 
 a.grey {
     text-decoration: none;
-    color: #999;
+    color: var(--grey-color);
 }
 a {
     text-decoration: none;
-    color: #2742ba;
+    color: var(--link-color);
 }
 
 a:hover {
@@ -45,23 +70,24 @@ h1 {
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
+    color: var(--text-color);
 }
 
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid var(--border-color);
     font-size: .8em;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #ffffff;
+    overflow: hidden;
+    background-color: var(--nav-bg-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: black;
+  color: var(--nav-text-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -85,4 +111,76 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+.flex-row-nowrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 32px;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex-row-to-column {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 32px;
+}
+
+.flex-item {
+    flex: auto;
+}
+
+.video-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--nav-bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .flex-row-to-column {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    .flex-item {
+        flex: auto;
+    }
 }
