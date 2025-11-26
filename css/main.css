@@ -111,6 +111,9 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+    float: none;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .flex-row-nowrap {
@@ -183,4 +186,90 @@ ul.posts li {
     .flex-item {
         flex: auto;
     }
+}
+
+.post {
+    margin: 40px 0;
+}
+
+.post h1 {
+    margin-bottom: 10px;
+}
+
+.post .meta {
+    color: var(--grey-color);
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.post-content {
+    line-height: 1.8;
+}
+
+.post-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.post-content h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.post-content ul,
+.post-content ol {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.post-content ul li,
+.post-content ol li {
+    list-style: disc;
+    float: none;
+    display: list-item;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.post-content ol li {
+    list-style: decimal;
+}
+
+.post-content p {
+    margin-bottom: 20px;
+}
+
+.post-content code {
+    background-color: var(--border-color);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.post-content pre {
+    background-color: var(--border-color);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.post-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.post-navigation {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-navigation a {
+    font-size: 1.2em;
 }
