@@ -1,0 +1,75 @@
+body > header {
+    background: transparent;
+    border-bottom: 0;
+    padding: 1.5rem 0 0;
+}
+
+header h1 {
+    letter-spacing: -0.04em;
+    margin: 0 auto;
+}
+
+.intro {
+    font-size: 1.3rem;
+}
+
+main {
+    padding-bottom: 1.5rem;
+}
+
+.summary {
+    background: var(--accent-bg);
+    border: 0;
+    border-radius: 0.5rem;
+    margin-top: 2.5rem;
+    padding: 0.25rem 1.5rem;
+}
+
+.summary p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+section h2 {
+    margin: 0;
+}
+
+.secondary {
+    background: transparent;
+    color: var(--accent);
+}
+
+.secondary:hover {
+    background: var(--accent);
+    color: var(--accent-text);
+}
+
+.links nav {
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 1.25rem;
+}
+
+.links nav a,
+.links nav a:visited {
+    align-items: center;
+    background: var(--accent-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--standard-border-radius);
+    color: var(--text);
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+}
+
+.links nav a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.links span {
+    color: var(--accent);
+    font-size: 1.25rem;
+}
