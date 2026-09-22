@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="gfaidx makes large GFA genome graphs fast to query by retrieving only the subgraph that is needed.">
+    <meta name="description" content="gfaidx provides fast and on-demand access to indexed genome graphs.">
     <meta name="theme-color" content="#0d47a1">
     <title>gfaidx — fast access to genome graphs</title>
     <link rel="stylesheet" href="../korea/simple.min.css">
@@ -13,35 +13,33 @@
     <header>
         <p class="eyebrow">Genome graph indexing</p>
         <h1>gfaidx</h1>
-        <p class="intro">Fast, on-demand access to the parts of a GFA genome graph that matter.</p>
+        <p class="intro">Fast and on-demand access to indexed genome graphs.</p>
         <p><a class="button" href="https://github.com/fawaz-dabbaghieh/gfaidx">View gfaidx on GitHub</a></p>
     </header>
 
     <main>
-        <section class="summary" aria-label="What gfaidx does">
-            <p>gfaidx indexes genome graphs so a query can retrieve a subgraph quickly and efficiently, without first loading the complete graph into memory.</p>
-        </section>
-
         <section>
-            <h2>Index once. Query any region.</h2>
+            <h2>Query any region fast.</h2>
+            <p>gfaidx indexes genome graphs so a query can retrieve a subgraph quickly and efficiently, without first loading the complete graph into memory.</p>
             <p>Instead of treating a large GFA as one file that must be loaded all at once, gfaidx keeps it in queryable indexed chunks. A request reads only the relevant graph neighborhood.</p>
         </section>
 
         <section>
             <h2>Interactive graph visualization</h2>
-            <p>The WebAssembly frontend is being developed in the <a href="https://github.com/fawaz-dabbaghieh/graphviz_wasm">graphviz_wasm</a> repository, and the backend is part of the MMseqs2 app API. This lets the visualizer request a subgraph for any query, then render the returned result on demand.</p>
+            <p>The <a href="https://github.com/fawaz-dabbaghieh/graphviz_wasm">graphviz_wasm</a> frontend is based on <a href="https://github.com/cmdcolin/BandageJS">BandageJS</a>, a WebAssembly version of BandageNG for web browsers. Its backend is part of the MMseqs2 app API. This lets the visualizer request a subgraph for any query, then render the returned result on demand.</p>
             <p><a class="button secondary" href="https://fawaz-dabbaghieh.github.io/graphviz_wasm/">Try the live graph visualizer</a></p>
+            <p>The frontend currently includes only a couple of example graphs. Once the server has been migrated to fast NVMe storage, fully indexed HPRC version 2 graphs will be available for visualization and API requests.</p>
         </section>
 
         <section>
-            <h2>Open the graph you need</h2>
-            <p>The gfaidx API is also being implemented in <a href="https://github.com/fawaz-dabbaghieh/BandageNG">BandageNG</a>. It will make it possible to open an indexed graph and visualize a requested subgraph immediately in BandageNG, rather than overwhelming memory by loading the complete graph, which is Bandage's current default behavior. This will allow users to explore HPRC-sized graphs effortlessly using BandageNG or BandageJS, or to send API requests directly from their own apps.</p>
+            <h2>Integration into BandageNG</h2>
+            <p>The gfaidx API is being implemented in <a href="https://github.com/fawaz-dabbaghieh/BandageNG">BandageNG</a>. The integration is not yet complete, but an initial implementation is available in the repository.</p>
+            <p>The goal is that when an indexed graph is opened in BandageNG, the complete graph does not need to be loaded into memory. Instead, a user can request a subgraph by node or genomic region and have the result visualized directly in BandageNG.</p>
         </section>
 
         <section class="status">
             <h2>Help shape these tools</h2>
             <p>gfaidx and its integrations are under active development. Feedback from people using the tools is very welcome.</p>
-            <p>The BandageJS frontend currently includes only a couple of example graphs. After the server is migrated to fast NVMe storage, HPRC version 2 graphs will be available there as fully indexed graphs for visualization and API requests.</p>
         </section>
 
         <section class="links" aria-labelledby="explore-heading">
